@@ -5,16 +5,14 @@
       <title>Synchronized Slider</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
       <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script> -->
-      <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
-      <!-- /socket.io/socket.io.js
-      https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.1/socket.io.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+      
 
       <script type="text/javascript">
          $(document).ready(function() {
          
            // sending a connect request to the server.
-           var socket = io.connect('http://localhost:5001');
+           var socket = io.connect('http://localhost:8081');
          
            // An event handler for a change of value 
            $('input.sync').on('input', function(event) {
@@ -26,7 +24,7 @@
            });
          
            socket.on('after connect', function(msg) {
-               console.log('After connect- sim consegui conectar', msg);
+               console.log('After connect', msg);
            });
          
            socket.on('update value', function(msg) {
