@@ -27,8 +27,9 @@
                console.log('After connect', msg);
            });
          
+           //  Ouve o evento 
            socket.on('update value', function(msg) {
-               console.log('Slider value updated');
+               console.log('o valor do slider foi atualizado');
                $('#' + msg.who).val(msg.data);
            });
          });

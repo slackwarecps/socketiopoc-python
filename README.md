@@ -2,7 +2,7 @@
 socketio pocket exemplo
 
 ````
-$ rodar
+$ python app.py
 
 abra em dois navegadores o endere
 
